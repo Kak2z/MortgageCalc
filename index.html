@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--<script src="index.js"></script>-->
+</head>
+<body>
+<div class="body">
+    <p>Hi! This web app where you can create banks and calculate mortgage payments using one of these bank’s settings</p>
+    <div class="table-responsive">
+        <table>
+            <tbody id="mainTable">
+            <tr>
+                <th>Bank name</th>
+                <th>Interest rate (%)</th>
+                <th>Maximum loan ($)</th>
+                <th>Minimum down payment (%)</th>
+                <th>Loan term (month)</th>
+                <th>Editor</th>
+            </tr>
+            <tr id="addForm">
+                    <td><input type="text" name="bankName" required></td>
+                    <td><input type="number" name="insertRate" min="1" max="100" required></td>
+                    <td><input type="number" name="maxLoan" min="0" required></td>
+                    <td><input type="number" name="minPay" min="1" max="100" required></td>
+                    <td><input type="number" name="loanTerm" min="6" max="360" required></td>
+                    <td><input type="button" value="Add new bank" onclick="addNewBank()"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        If you want to see the payment plan, visit:<a class="link" href="calc.html">Mortgage calculator page</a>
+    </p>
+
+</div>
+<script src="main.js"></script>
+
+</body>
+</html>
+
